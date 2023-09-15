@@ -77,7 +77,7 @@ test('check that the cart button works and the user navigates on cart page',asyn
 
 })
 
-test.only('login',async({page})=> {
+test('login',async({page})=> {
 
     // Step1: Enter the Automation exercise URL on browser
     await page.goto('https://automationexercise.com/')
@@ -93,13 +93,39 @@ test.only('login',async({page})=> {
     // Enter emailid 
     await page.locator('form').filter({ hasText: 'Login' }).getByPlaceholder('Email Address').fill('kajaldev20@gmail.com')
     
-    
     // password
     await page.getByPlaceholder('Password').fill('1234')
     
     // click on login
     await page.getByRole('button', { name: 'Login' }).click()  
 })
+
+test.only('Signup',async({page})=> {
+
+    // Step1: Enter the Automation exercise URL on browser
+    await page.goto('https://automationexercise.com/')
+
+    // Step2:  Verify Signup/Login link is visible
+    await expect (page.getByRole('link', { name: ' Signup / Login' })).toBeVisible()
+
+    // Step3: Click on signup/Login button
+    await page.getByRole('link', { name: ' Signup / Login' }).click()
+
+    //step4: Enter name
+    await page.getByPlaceholder('Name').fill('kajal kumari')
+
+    // step5: Enter Email
+    await page.locator('form').filter({ hasText: 'Signup' }).getByPlaceholder('Email Address').fill('kajaldev20@gmail.com')
+
+    //Step5: Click on signup button
+    await page.getByRole('button',{name: 'Signup'}).click()
+
+    //Verify user is navigated to signup page
+    await expect (page).toHaveURL('https://automationexercise.com/signup')
+
+    await page.pause()
+})
+
 
 
 
