@@ -100,7 +100,7 @@ test('login',async({page})=> {
     await page.getByRole('button', { name: 'Login' }).click()  
 })
 
-test.only('Signup',async({page})=> {
+test('Signup',async({page})=> {
 
     // Step1: Enter the Automation exercise URL on browser
     await page.goto('https://automationexercise.com/')
