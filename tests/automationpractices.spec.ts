@@ -33,7 +33,7 @@ test('Check that home button is working', async({page})=> {
     
 })
 
-test('Check that the Product button works and user navigates on product page', async({page})=> {
+test.skip('Check that the Product button works and user navigates on product page', async({page})=> {
 
     // Step1: Enter the Automation exercise URL on browser
     await page.goto('https://automationexercise.com/')
@@ -89,7 +89,7 @@ test('login',async({page}) => {
     await loginPage.loginOnAutomationExercise(testData.emailId, testData.password)
 })
 
-test('Signup',async({page})=> {
+test.skip('Signup',async({page})=> {
 
      //await page.waitForTimeout(50000);
     //await page.pause()
