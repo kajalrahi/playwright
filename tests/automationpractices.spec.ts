@@ -73,7 +73,7 @@ test('check that the cart button works and the user navigates on cart page',asyn
 
 })
 
-test.only('login',async({page}) => {
+test('login',async({page}) => {
     let loginPage = new LoginPage(page)
 
     // Step1: Enter the Automation exercise URL on browser
