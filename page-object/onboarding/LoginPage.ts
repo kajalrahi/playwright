@@ -16,7 +16,7 @@ class LoginPage {
         this.textEmailId = page.locator('form').filter({ hasText: 'Login' }).getByPlaceholder('Email Address');
         this.textPassword = page.getByPlaceholder('Password')
         this.loginButton = page.getByRole('button', { name: 'Login' })
-        this.invalidLoginMessage = page.getByRole('text', {name: 'Your email or password is incorrect!'})
+        this.invalidLoginMessage = page.getByText('Your email or password is incorrect!')
     }
 
     async loginOnAutomationExercise(emailId: string, password: string) {
