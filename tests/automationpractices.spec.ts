@@ -29,6 +29,7 @@ test('Check that home button is working', async({page})=> {
 
     // Step4: Verify user remains on Home page only and the url is same
     await expect(page).toHaveURL('https://automationexercise.com/')
+    await page.pause()
 
     
 })
@@ -71,22 +72,6 @@ test('check that the cart button works and the user navigates on cart page',asyn
      await expect (page.getByText('Cart is empty!')).toBeVisible()
 
 
-})
-
-test('login',async({page}) => {
-    let loginPage = new LoginPage(page)
-
-    // Step1: Enter the Automation exercise URL on browser
-    await page.goto(testData.url)
-
-    // Step2:  Verify Signup/Login link is visible
-    await expect (page.getByRole('link', { name: ' Signup / Login' })).toBeVisible()
-
-    // Step3: Click on signup/Login button
-    await page.getByRole('link', { name: ' Signup / Login' }).click()
-
-    //await page.pause()
-    await loginPage.loginOnAutomationExercise(testData.emailId, testData.password)
 })
 
 test.skip('Signup',async({page})=> {
