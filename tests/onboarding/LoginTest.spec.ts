@@ -4,7 +4,7 @@ import HomePage from '../../page-object/home/HomePage'
 
 const testData = JSON.parse(JSON.stringify(require('../../test-data/test-data.json')))
 
-test.only('Login on automation exercise with invalid credential',async({page}) => {
+test('Login on automation exercise with invalid credential',async({page}) => {
     let homePage = new HomePage(page)
     let loginPage = new LoginPage(page)
 

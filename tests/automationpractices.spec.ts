@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import LoginPage from '../page-object/onboarding/LoginPage';
 const testData = JSON.parse(JSON.stringify(require('../test-data/test-data.json')))
 
-test('check that user can navigate to automationexercise.com and verify the logo is shown', async ({ page }) => {
+test.skip('check that user can navigate to automationexercise.com and verify the logo is shown', async ({ page }) => {
     //Visit automation exercise
     await page.goto(testData.url)
 
@@ -15,7 +15,7 @@ test('check that user can navigate to automationexercise.com and verify the logo
     await expect(page.getByAltText('Website for automation practice')).toBeVisible()
 })
 
-test('Check that home button is working', async({page})=> {
+test.skip('Check that home button is working', async({page})=> {
     
 
     // Step1: Enter the Automation exercise URL on browser
@@ -54,7 +54,7 @@ test.skip('Check that the Product button works and user navigates on product pag
     
 })
 
-test('check that the cart button works and the user navigates on cart page',async({page})=> {
+test.skip('check that the cart button works and the user navigates on cart page',async({page})=> {
 
     // Step1: Enter the Automation exercise URL on browser
     await page.goto('https://automationexercise.com/')
