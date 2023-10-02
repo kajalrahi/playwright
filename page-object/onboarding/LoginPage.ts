@@ -10,7 +10,7 @@ class LoginPage {
     loginButton: Locator
     invalidLoginMessage: Locator
 
-    constructor(page){
+    constructor(page: Page) {
         this.page = page;
         this.textLoginTitle = page.getByRole('heading', { name: 'Login to your account' })
         this.textEmailId = page.locator('form').filter({ hasText: 'Login' }).getByPlaceholder('Email Address');

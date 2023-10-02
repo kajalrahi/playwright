@@ -10,7 +10,7 @@ test.only('Login on automation exercise with invalid credential',async({page}) =
 
     // Step1: Enter the Automation exercise URL on browser
     // await homePage.goToAutomationExerciseURL()
-     await page.goto(testData.url)
+     await homePage.goToAutomationExerciseURL(testData.url)
 
     // Step2: Verify signup/Login link is visible
     await homePage.verifySignupOrLoginLinkIsVisible()
