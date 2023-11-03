@@ -69,7 +69,7 @@ class SignupPage {
       this.popupAccountCreatedMessage = page.getByText('Account Created!')
     }
 
-    async signupAutomationExercise(name: string, emailId: string){
+    async signupAutomationExercise(name: string, emailId: string) {
       await this.textSignupTitle.isVisible()
       await this.textName.fill(name)
       await this.textEmailId.fill(emailId)
@@ -87,7 +87,7 @@ class SignupPage {
       await this.buttonRecieveSpecialOffers.isVisible()  
     }
 
-    async selectDateOfBirth(day:string, month:string, year:string){
+    async selectDateOfBirth(day:string, month:string, year:string) {
       await this.textDateOfBirthTitle.isVisible()
       await this.buttonDays.selectOption(day)
       await this.buttonMonths.selectOption(month)
@@ -102,7 +102,7 @@ class SignupPage {
         }
       }
 
-    async fillAdressInformation(firstName:string, lastName:string, company:string, address:string, address2:string, country:string, state:string, city:string, zipcode:string, mobileNumber:string){
+    async fillAdressInformation(firstName:string, lastName:string, company:string, address:string, address2:string, country:string, state:string, city:string, zipcode:string, mobileNumber:string) {
       await this.textAddinformationTitle.isVisible()
       await this.textFirstName.fill(firstName)
       await this.textLastName.fill(lastName)

@@ -6,7 +6,7 @@ import UtilityHelper from '../../utility/UtilityHelper'
 
 const testData = JSON.parse(JSON.stringify(require('../../test-data/test-data.json')))
 
-test('To delete account',async({page})=> {
+test('Test delete account',async({page}) => {
     let homePage = new Homepage(page)
     let deletePage  = new DeletePage(page)
     let signupPage = new SignupPage(page)

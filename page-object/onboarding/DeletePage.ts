@@ -2,7 +2,7 @@ import { Locator, Page } from "@playwright/test";
 import BasePage from "../home/BasePage";
 const { expect } = require('@playwright/test');
 
-class DeletePage{
+class DeletePage {
     page: Page
     linkContinue:Locator
     textLoggedUsernameVisible:Locator
@@ -18,7 +18,7 @@ class DeletePage{
         this.buttonContinue = page.getByRole('link', { name: 'Continue' })
     }
 
-    async deleteAccount(){
+    async deleteAccount() {
         await this.linkContinue.click()
         await this.textLoggedUsernameVisible.isVisible()
         await this.buttonDelete.click()

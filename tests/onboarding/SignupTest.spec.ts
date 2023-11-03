@@ -6,7 +6,7 @@ import DeletePage from '../../page-object/onboarding/DeletePage'
 const testData = JSON.parse(JSON.stringify(require('../../test-data/test-data.json')))
 
 
-test('Signup',async({page})=> {
+test('Register a new user',async({page}) => {
 
     //await page.waitForTimeout(50000);
    //await page.pause()
